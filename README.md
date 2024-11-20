@@ -1,5 +1,4 @@
 ++++++++++++++++++++++++++++++++++
-
 FITURE SHELL : 
 - MASS DEFACE
 - MASS DELETE
@@ -11,7 +10,6 @@ FITURE SHELL :
 - BACK CONNECT / NETWORK
 - LOCK SHELL
 - CHMOD SHELL
-
 ==================================
 pass default : root
 ==================================

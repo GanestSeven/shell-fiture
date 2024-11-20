@@ -1,3 +1,5 @@
+++++++++++++++++++++++++++++++++++
+
 FITURE SHELL : 
 - MASS DEFACE
 - MASS DELETE
@@ -10,5 +12,8 @@ FITURE SHELL :
 - LOCK SHELL
 - CHMOD SHELL
 
+==================================
 pass default : root
+==================================
 pass default : whohaxorqt1337
+==================================

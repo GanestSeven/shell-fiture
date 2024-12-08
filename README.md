@@ -13,6 +13,7 @@ FITURE SHELL :
 - LOCK SHELL
 - CHMOD SHELL
 
+Name shell : nano.php
 
 pass default : root
 

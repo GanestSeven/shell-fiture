@@ -16,5 +16,3 @@ FITURE SHELL :
 Name shell : nano.php
 
 pass default : root
-
-pass default : whohaxorqt1337

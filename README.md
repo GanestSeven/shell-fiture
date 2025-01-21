@@ -16,3 +16,4 @@ FITURE SHELL :
 Name shell : nano.php
 
 pass default : root
+pass default : haxorqt911
